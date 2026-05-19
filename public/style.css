@@ -1,0 +1,52 @@
+:root {
+	background: #615c5c;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+	padding: 20px;
+}
+
+.section {
+	background: #fff;
+	padding: 10px;
+	border-radius: 5px;
+}
+
+.header {
+	display: flex;
+	justify-content: center;
+}
+
+h1 {
+	margin: 0px;
+	display: flex;
+	justify-content: center;
+}
+
+.actions {
+	display: flex;
+	justify-content: space-evenly;
+	flex-direction: row;
+	gap: 30px;
+	width: 100%;
+}
+
+.action {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+	width: 100%;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+
+.posts {
+	height: 100%;
+}

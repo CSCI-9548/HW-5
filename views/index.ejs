@@ -1,0 +1,60 @@
+<!-- index.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Posts App</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+  <div class="section header">
+    <h1>Hunter-Poster-mini</h1>
+  </div>
+
+  <div class="actions">
+    <div class="section action">
+      <h1>Create a Post</h1>
+      <form id="create" action="/posts" method="POST">
+        <input type="text" placeholder="title" name="title" required />
+        <input type="text" placeholder="content" name="content" required />
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+    <div class="section action">
+      <h1>Update a Post</h1>
+      <form id="update">
+        <input type="text" placeholder="title" name="title" required />
+        <input type="text" placeholder="content" name="content" required />
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+    <div class="section action">
+      <h1>Delete a Post</h1>
+      <form id="delete">
+        <input type="text" placeholder="title" name="title" required />
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="section posts">
+    <h1>Posts</h1>
+    <ul class="posts">
+      <!-- Loop through posts -->
+      <% for(var i = 0; i < posts.length; i++) {%>
+      <li class="post">
+        <!-- Output name from the iterated post object -->
+        <span><%= posts[i].title %></span>:
+        <!-- Output post from the iterated post object -->
+        <span><%= posts[i].content %></span>
+      </li>
+      <% } %>
+    </ul>
+  </div>
+
+  <script src="/main.js"></script>
+</body>
+
+</html>
